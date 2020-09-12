@@ -1,0 +1,59 @@
+INFO:root:Train set: Epoch: 0 [32/5446]	Accuracy: 0/32 (0%)	Loss: 0.141640
+INFO:root:Val set: Accuracy: 147/616 (24%)	Loss: 0.139925
+INFO:root:Train set: Epoch: 0 [3232/5446]	Accuracy: 2161/3200 (68%)	Loss: 0.030695
+INFO:root:Val set: Accuracy: 486/616 (79%)	Loss: 0.020126
+INFO:root:Train set: Epoch: 1 [32/5446]	Accuracy: 25/32 (78%)	Loss: 0.014425
+INFO:root:Val set: Accuracy: 473/616 (77%)	Loss: 0.021440
+INFO:root:Train set: Epoch: 1 [3232/5446]	Accuracy: 2748/3200 (86%)	Loss: 0.012116
+INFO:root:Val set: Accuracy: 493/616 (80%)	Loss: 0.018344
+INFO:root:Train set: Epoch: 2 [32/5446]	Accuracy: 30/32 (94%)	Loss: 0.005895
+INFO:root:Val set: Accuracy: 513/616 (83%)	Loss: 0.016711
+INFO:root:Train set: Epoch: 2 [3232/5446]	Accuracy: 2972/3200 (93%)	Loss: 0.006536
+INFO:root:Val set: Accuracy: 516/616 (84%)	Loss: 0.015936
+INFO:root:Train set: Epoch: 3 [32/5446]	Accuracy: 31/32 (97%)	Loss: 0.002467
+INFO:root:Val set: Accuracy: 517/616 (84%)	Loss: 0.016238
+INFO:root:Train set: Epoch: 3 [3232/5446]	Accuracy: 2992/3200 (94%)	Loss: 0.005985
+INFO:root:Val set: Accuracy: 516/616 (84%)	Loss: 0.017334
+INFO:root:Train set: Epoch: 4 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.001628
+INFO:root:Val set: Accuracy: 526/616 (85%)	Loss: 0.014706
+INFO:root:Train set: Epoch: 4 [3232/5446]	Accuracy: 3128/3200 (98%)	Loss: 0.002098
+INFO:root:Val set: Accuracy: 535/616 (87%)	Loss: 0.013191
+INFO:root:Train set: Epoch: 5 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000590
+INFO:root:Val set: Accuracy: 531/616 (86%)	Loss: 0.013327
+INFO:root:Train set: Epoch: 5 [3232/5446]	Accuracy: 3148/3200 (98%)	Loss: 0.001521
+INFO:root:Val set: Accuracy: 527/616 (86%)	Loss: 0.018639
+INFO:root:Train set: Epoch: 6 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000339
+INFO:root:Val set: Accuracy: 516/616 (84%)	Loss: 0.018822
+INFO:root:Train set: Epoch: 6 [3232/5446]	Accuracy: 3123/3200 (98%)	Loss: 0.002583
+INFO:root:Val set: Accuracy: 542/616 (88%)	Loss: 0.013920
+INFO:root:Train set: Epoch: 7 [32/5446]	Accuracy: 31/32 (97%)	Loss: 0.001207
+INFO:root:Val set: Accuracy: 543/616 (88%)	Loss: 0.016680
+INFO:root:Train set: Epoch: 7 [3232/5446]	Accuracy: 3181/3200 (99%)	Loss: 0.000607
+INFO:root:Val set: Accuracy: 527/616 (86%)	Loss: 0.016940
+INFO:root:Train set: Epoch: 8 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000180
+INFO:root:Val set: Accuracy: 542/616 (88%)	Loss: 0.015522
+INFO:root:Train set: Epoch: 8 [3232/5446]	Accuracy: 3164/3200 (99%)	Loss: 0.001101
+INFO:root:Val set: Accuracy: 525/616 (85%)	Loss: 0.018557
+INFO:root:Train set: Epoch: 9 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000254
+INFO:root:Val set: Accuracy: 530/616 (86%)	Loss: 0.018620
+INFO:root:Train set: Epoch: 9 [3232/5446]	Accuracy: 3139/3200 (98%)	Loss: 0.001632
+INFO:root:Val set: Accuracy: 521/616 (85%)	Loss: 0.017584
+INFO:root:Train set: Epoch: 10 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000947
+INFO:root:Val set: Accuracy: 536/616 (87%)	Loss: 0.013301
+INFO:root:Train set: Epoch: 10 [3232/5446]	Accuracy: 3182/3200 (99%)	Loss: 0.000778
+INFO:root:Val set: Accuracy: 540/616 (88%)	Loss: 0.014234
+INFO:root:Train set: Epoch: 11 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000357
+INFO:root:Val set: Accuracy: 541/616 (88%)	Loss: 0.012291
+INFO:root:Train set: Epoch: 11 [3232/5446]	Accuracy: 3192/3200 (100%)	Loss: 0.000388
+INFO:root:Val set: Accuracy: 546/616 (89%)	Loss: 0.011488
+INFO:root:Train set: Epoch: 12 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000049
+INFO:root:Val set: Accuracy: 545/616 (88%)	Loss: 0.012016
+INFO:root:Train set: Epoch: 12 [3232/5446]	Accuracy: 3196/3200 (100%)	Loss: 0.000265
+INFO:root:Val set: Accuracy: 542/616 (88%)	Loss: 0.013107
+INFO:root:Train set: Epoch: 13 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000532
+INFO:root:Val set: Accuracy: 543/616 (88%)	Loss: 0.012727
+INFO:root:Train set: Epoch: 13 [3232/5446]	Accuracy: 3193/3200 (100%)	Loss: 0.000289
+INFO:root:Val set: Accuracy: 543/616 (88%)	Loss: 0.013156
+INFO:root:Train set: Epoch: 14 [32/5446]	Accuracy: 32/32 (100%)	Loss: 0.000015
+INFO:root:Val set: Accuracy: 538/616 (87%)	Loss: 0.013582
+INFO:root:Test set: Accuracy: 2515/3929 (64%)
