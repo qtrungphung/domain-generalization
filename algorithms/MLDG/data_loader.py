@@ -44,6 +44,7 @@ class BatchImageGenerator:
 
         if self.stage is 'train':
             self.images, self.labels = shuffle_data(samples=self.images, labels=self.labels)
+        print(torch.from_numpy(self.images).size())
 
 
     def get_images_labels_batch(self):

@@ -5,10 +5,12 @@ from model import ModelBaseline
 
 def main():
     main_arg_parser = argparse.ArgumentParser(description="parser")
-    subparsers = main_arg_parser.add_subparsers(title="subcommands", dest="subcommand")
+    subparsers = main_arg_parser.add_subparsers(title="subcommands",
+                                                dest="subcommand")
 
     train_arg_parser = subparsers.add_parser("train", help="parser for training arguments")
-    train_arg_parser.add_argument("--test_every", type=int, default=50,
+    train_arg_parser.add_argument("--test_every", type=int,
+                                  default=50,
                                   help="number of test every steps")
     train_arg_parser.add_argument("--batch_size", type=int, default=128,
                                   help="batch size for training, default is 64")
@@ -28,16 +30,17 @@ def main():
                                   help='momentum')
     train_arg_parser.add_argument("--logs", type=str, default='logs/',
                                   help='logs folder to write log')
-    train_arg_parser.add_argument("--model_path", type=str, default='',
+    train_arg_parser.add_argument("--model_path", type=str, default='./models',
                                   help='folder for saving model')
     train_arg_parser.add_argument("--state_dict", type=str, default='',
                                   help='model of pre trained')
-    train_arg_parser.add_argument("--data_root", type=str, default='',
+    train_arg_parser.add_argument("--data_root", type=str, default='./data',
                                   help='folder root of the data')
     train_arg_parser.add_argument("--debug", type=bool, default=False,
                                   help='whether for debug mode or not')
     args = main_arg_parser.parse_args()
 
+    print(args.num_classes)
     model_obj = ModelBaseline(flags=args)
     # model_obj.train(flags=args)
 
