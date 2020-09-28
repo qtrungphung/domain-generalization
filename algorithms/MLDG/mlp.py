@@ -40,9 +40,7 @@ class MLP(nn.Module):
                    meta_step_size=meta_step_size,
                    stop_gradient=stop_gradient)
 
-        end_points = {'Predictions': F.softmax(input=x, dim=-1)}
-
-        return x, end_points
+        return x
 
 
 
