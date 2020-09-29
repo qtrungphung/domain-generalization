@@ -159,7 +159,6 @@ class ModelBaseline:
 
             # optimize the parameters
             self.optimizer.step()
-            self.scheduler.step()
 
             print('ite:', ite, 'loss:', total_loss.item(), 'lr:',
                   self.scheduler.get_lr()[0])
@@ -173,6 +172,7 @@ class ModelBaseline:
 
             if ite % flags.test_every == 0 and ite is not 0 or flags.debug:
                 self.test_workflow(flags, ite)
+                self.scheduler.step()
 
     def test_workflow(self, flags, ite):
         """ Test model on validation set
