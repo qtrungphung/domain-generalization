@@ -129,45 +129,20 @@ class ModelBaseline:
 
         self.loss_fn = nn.CrossEntropyLoss()
 
-    def heldout_test(self, flags, state_dict_file):
-        """ Test model on unseen domain
-        input: state_dict_file : name of the trained model's state dict """
-
-        # load the best model in the validation data
-        model_path = os.path.join(flags.model_path, state_dict_file)
-        self.network.load_state_dict(torch.load(model_path))
-        self.network.eval()
-
-        # test dataset and data loader
-        dataset, dataloader = to_data_loader(
-            flags=flags, stage='test', file_path=self.unseen_data_path)
-
-        corrects = 0
-        totals = 0
-        for samples, labels in dataloader:
-            outputs = self.network(samples)
-            _, preds = torch.max(outputs, 1)
-            corrects += (preds == labels).sum().item()
-            totals += labels.size(0)
-        accuracy = corrects / totals
-        print("test set: {}, total: {}, corrects: {}, accuracy {}".format(
-            self.unseen_index, totals, corrects, accuracy))
 
     def train(self, flags):
         """ base line training:
         get a batch from each domain, compute loss, add from all domains
         backprop from total loss
         """
-        self.network.train()
 
+        self.network.train()
         self.best_accuracy_val = -1
 
         for ite in range(flags.inner_loops):
 
             self.scheduler.step(epoch=ite)
-
             total_loss = 0.0
-
             self.train_dataloader_list = []
 
             # the following method insists on datasets of the same length
@@ -204,9 +179,8 @@ class ModelBaseline:
             # optimize the parameters
             self.optimizer.step()
 
-            print(
-                'ite:', ite, 'loss:', total_loss.item(), 'lr:',
-                self.scheduler.get_lr()[0])
+            print('ite:', ite, 'loss:', total_loss.item(), 'lr:',
+                  self.scheduler.get_lr()[0])
 
             flags_log = os.path.join(flags.logs, 'loss_log.txt')
             write_log(
@@ -219,13 +193,16 @@ class ModelBaseline:
                 self.test_workflow(flags, ite)
 
     def test_workflow(self, flags, ite):
-        """todo"""
+        """ Test model on validation set
+            validation set is provided by dataloader attached to model:
+            self.val_dataloaders
+        """
 
         accuracies = []
         for count, loader in enumerate(self.val_dataloaders):
-            accuracy_val = self.test(batImageGenTest=batImageGenVal, flags=flags, ite=ite,
-                                     log_dir=flags.logs, log_prefix='val_index_{}'.format(count))
-
+            accuracy_val = self._test(
+                dataloader=loader, flags=flags, ite=ite,
+                log_prefix='val_index_{}'.format(count), log_dir=flags.logs)
             accuracies.append(accuracy_val)
 
         mean_acc = np.mean(accuracies)
@@ -234,11 +211,65 @@ class ModelBaseline:
             self.best_accuracy_val = mean_acc
 
             f = open(os.path.join(flags.logs, 'Best_val.txt'), mode='a')
-            f.write('ite:{}, best val accuracy:{}\n'.format(ite, self.best_accuracy_val))
+            f.write('ite:{}, best val accuracy:{}\n'.format(
+                ite, self.best_accuracy_val))
             f.close()
 
             if not os.path.exists(flags.model_path):
                 os.mkdir(flags.model_path)
 
             outfile = os.path.join(flags.model_path, 'best_model.tar')
-            torch.save({'ite': ite, 'state': self.network.state_dict()}, outfile)
+            torch.save({'ite': ite,
+                        'state': self.network.state_dict()}, outfile)
+
+    def heldout_test(self, flags, state_dict_file):
+        """ Test a saved model on unseen domain
+        input: state_dict_file : name of the trained model's state dict """
+
+        # load the best model in the validation data
+        model_path = os.path.join(flags.model_path, state_dict_file)
+        self.network.load_state_dict(torch.load(model_path))
+
+        # test dataset and data loader
+        dataset, dataloader = to_data_loader(
+            flags=flags, stage='test', file_path=self.unseen_data_path)
+
+        # call test method
+        accuracy = self._test(dataloader=dataloader, flags=flags, ite=0,
+                              log_prefix='held', log_dir=flags.logs)
+        return accuracy
+
+    def _test(self, dataloader, flags, ite, log_prefix, log_dir='logs/'):
+        """ Test model on input dataloader
+            test_dataloader: dataloader of the test dataset
+            flags: flags
+            ite: iteration, to write to log
+            log_prefix
+            log_dir
+
+            return: accuracy
+        """
+
+        assert dataloader is not None
+
+        self.network.eval()
+
+        corrects = 0
+        totals = 0
+        for samples, labels in dataloader:
+            outputs = self.network(samples)
+            _, preds = torch.max(outputs, 1)
+            corrects += (preds == labels).sum().item()
+            totals += labels.size(0)
+        accuracy = corrects / totals
+        print("total: {}, corrects: {}, accuracy {}".format(
+            totals, corrects, accuracy))
+
+        log_path = os.path.join(log_dir, '{}.txt'.format(log_prefix))
+        write_log(str('ite:{}, accuracy:{}'.format(ite, accuracy)),
+                  log_path=log_path)
+
+        # switch on the network train mode after test
+        self.network.train()
+
+        return accuracy
