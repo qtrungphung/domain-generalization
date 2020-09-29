@@ -37,3 +37,93 @@
 ['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
 ['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
 ./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5
+['./data/cartoon_train_features.hdf5', './data/photo_train_features.hdf5', './data/sketch_train_features.hdf5']
+['./data/cartoon_val_features.hdf5', './data/photo_val_features.hdf5', './data/sketch_val_features.hdf5']
+./data/art_painting_features.hdf5

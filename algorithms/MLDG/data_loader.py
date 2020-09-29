@@ -25,6 +25,7 @@ class Dataset(torch.utils.data.Dataset):
         f = h5py.File(file_path, "r")
         self.images = torch.from_numpy(np.array(f['images']))
         self.labels = torch.from_numpy(np.array(f['labels']))
+        self.labels = self.labels.long()
         f.close()
 
     def __getitem__(self, idx):

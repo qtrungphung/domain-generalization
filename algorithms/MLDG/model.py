@@ -3,6 +3,7 @@ import os
 import numpy as np
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from torch.optim import lr_scheduler, SGD
 
 import mlp
@@ -17,9 +18,9 @@ class ModelBaseline:
 
         torch.set_default_tensor_type('torch.cuda.FloatTensor')
         if torch.cuda.is_available():
-            device = 'cuda:0'
+            self.device = 'cuda:0'
         else:
-            device = 'cpu'
+            self.device = 'cpu'
 
         # fix the random seed or not
         # fix_seed()
@@ -27,7 +28,7 @@ class ModelBaseline:
         self.to_data_loader(flags)
 
         self.network = mlp.MLPNet(num_classes=flags.num_classes)
-        self.network.to(device)
+        self.network.to(self.device)
 
         print('NETWORK ARCHITECTURE\n', self.network)
         print('FLAGS:', flags)
@@ -127,8 +128,7 @@ class ModelBaseline:
         self.scheduler = lr_scheduler.StepLR(
             optimizer=self.optimizer, step_size=flags.step_size, gamma=0.1)
 
-        self.loss_fn = nn.CrossEntropyLoss()
-
+        self.loss_fn = F.cross_entropy 
 
     def train(self, flags):
         """ base line training:
@@ -141,33 +141,14 @@ class ModelBaseline:
 
         for ite in range(flags.inner_loops):
 
-            self.scheduler.step(epoch=ite)
             total_loss = 0.0
-            self.train_dataloader_list = []
-
-            # the following method insists on datasets of the same length
-            length = len(self.train_datasets[0])
-            for dataset in self.train_dataloaders:
-                assert len(dataset) == length
 
             for loader in self.train_dataloaders:
-                self.train_dataloader_list.append(iter(loader))
-
-            samples_list = []
-            labels_list = []
-
-            for samples, labels in self.train_dataloader_list[0]:
-                samples_list.append(samples)
-                labels_list.append(labels)
-                for index in range(len(self.train_datasets)):
-                    if index is not 0:
-                        samples, labels = next(self.train_dataloaders[index])
-                        samples_list.append(samples)
-                        labels_list.append(labels)
-
-                for i in range(len(samples_list)):
-                    outputs = self.network(samples_list[i])
-                    loss = self.loss_fn(outputs, labels_list[i])
+                for samples, labels in loader:
+                    samples = samples.to(self.device)
+                    labels = labels.to(self.device)
+                    outputs = self.network(samples)
+                    loss = self.loss_fn(outputs, labels)
                     total_loss += loss
 
             # init the grad to zeros first
@@ -178,6 +159,7 @@ class ModelBaseline:
 
             # optimize the parameters
             self.optimizer.step()
+            self.scheduler.step()
 
             print('ite:', ite, 'loss:', total_loss.item(), 'lr:',
                   self.scheduler.get_lr()[0])
@@ -257,6 +239,8 @@ class ModelBaseline:
         corrects = 0
         totals = 0
         for samples, labels in dataloader:
+            samples = samples.to(self.device)
+            labels = labels.to(self.device)
             outputs = self.network(samples)
             _, preds = torch.max(outputs, 1)
             corrects += (preds == labels).sum().item()

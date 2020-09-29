@@ -59,7 +59,7 @@ def main():
     model_obj.train(flags=args)
 
     # after training, we should test the held out domain
-    # model_obj.heldout_test(flags=args)
+    model_obj.heldout_test(flags=args)
 
 
 if __name__ == "__main__":
