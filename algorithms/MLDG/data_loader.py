@@ -13,6 +13,7 @@ class Dataset(torch.utils.data.Dataset):
             stage : train val test
             file_path :
     """
+
     def __init__(self, flags, stage, file_path):
 
         if stage not in ['train', 'val', 'test']:
@@ -47,7 +48,7 @@ def to_data_loader(flags, stage, file_path):
 
     dataset = Dataset(flags=flags, stage=stage, file_path=file_path)
     dataloader = torch.utils.data.DataLoader(
-        dataset, batch_size=4, shuffle=True, num_workers=0)
+        dataset, batch_size=flags.batch_size, shuffle=True, num_workers=4)
     return dataset, dataloader
 
 

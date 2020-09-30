@@ -24,7 +24,7 @@ def main():
                                   default=1,
                                   help="number of step size to decay the lr")
     train_arg_parser.add_argument("--inner_loops", type=int,
-                                  default=200000,
+                                  default=20000,
                                   help="inner loops")
     train_arg_parser.add_argument("--unseen_index", type=int,
                                   default=0,
